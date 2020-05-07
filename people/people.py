@@ -1,6 +1,5 @@
 from abc import ABC, abstractclassmethod
 
-# class Person(ABC):
 class Person(ABC):
     def __init__(self, first_name, last_name, age, salary):
         self.first_name = first_name
@@ -31,4 +30,15 @@ class Worker(Person):
     def __str__(self):
         res = super().__str__()
         res += f"Job: {self.job}\n"
+        return res
+
+
+class Engineer(Person):
+    def __init__(self, first_name, last_name, age, salary, speciality):
+        super().__init__(first_name, last_name, age, salary)
+        self.speciality = speciality
+
+    def __str__(self):
+        res = super().__str__()
+        res += f"Speciality: {self.speciality}\n"
         return res
