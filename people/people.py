@@ -21,3 +21,14 @@ class Employee(Person):
         res = super().__str__()
         res += f"Company: {self.company_name}\n"
         return res
+
+
+class Worker(Person):
+    def __init__(self, first_name, last_name, age, salary, job):
+        super().__init__(first_name, last_name, age, salary)
+        self.job = job
+
+    def __str__(self):
+        res = super().__str__()
+        res += f"Job: {self.job}\n"
+        return res
