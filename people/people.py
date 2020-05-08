@@ -1,4 +1,4 @@
-from abc import ABC, abstractclassmethod
+from abc import ABC
 
 class Person(ABC):
     def __init__(self, first_name, last_name, age, salary):
