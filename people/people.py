@@ -25,7 +25,8 @@ class Employee(Person):
         return f"{self.first_name.lower()}.{self.last_name.lower()}@companyname.com"
 
     def __str__(self):
-        res = super().__str__()
+        res = "Employee:\n"
+        res += super().__str__()
         res += f"Company: {self.company_name}\n"
         return res
 
@@ -36,7 +37,8 @@ class Worker(Person):
         self.job = job
 
     def __str__(self):
-        res = super().__str__()
+        res = "Worker:\n"
+        res += super().__str__()
         res += f"Job: {self.job}\n"
         return res
 
@@ -51,6 +53,7 @@ class Engineer(Person):
         return f"{self.first_name.lower()}_{self.last_name.lower()}@mail.com"
 
     def __str__(self):
-        res = super().__str__()
+        res = "Engineer:\n"
+        res += super().__str__()
         res += f"Speciality: {self.speciality}\n"
         return res
